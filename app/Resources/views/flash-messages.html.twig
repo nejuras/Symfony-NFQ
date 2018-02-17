@@ -1,0 +1,7 @@
+{% for flash_level in ['success', 'notice', 'info', 'warning', 'error'] %}
+    {% for flashMessage in app.session.flashbag.get(flash_level) %}
+        <div class="alert alert-{{ flash_level }}">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+{% endfor %}

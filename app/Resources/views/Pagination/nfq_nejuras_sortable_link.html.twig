@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Twitter Bootstrap v3 Sorting control implementation.
+ *
+ * @author Afolabi Olayinka <folabiolayinka@gmail.com>
+ */
+#}
+
+<a{% for attr, value  in options %} {{ attr }}="{{ value }}"{% endfor %}>
+    <span>
+        {% if app.request.get('sort') == key %}
+            {% if app.request.get('direction') == 'desc' %}
+                <i class="glyphicon glyphicon-triangle-bottom"></i>
+            {% else %}
+                <i class="glyphicon glyphicon-triangle-top"></i>
+            {% endif %}
+        {% else %}
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+        {% endif %}
+    </span>
+    {{ title }}
+</a>

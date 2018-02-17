@@ -1,0 +1,16 @@
+form:
+    labels:
+        firstname:      Vardas
+        lastname:       Pavardė
+        email:          El. paštas
+        phone:          Tel. numeris
+        address:        Adresas
+        city:           Miestas
+        postalcode:     Pašto kodas
+        submit:         Užsakyti
+        submitform:     Užsakymo Forma
+        isbn:           ISBN
+        search:
+          button:       Filtruoti
+#         label:        Paieška
+          placeholder:  Filtruoti pagal vardą

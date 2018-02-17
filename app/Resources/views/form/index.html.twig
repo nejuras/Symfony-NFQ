@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+   <div class="row">
+     <div class="col-sm-12">
+        {% include ('flash-messages.html.twig') %}
+     </div>
+   </div>
+</div>
+<aside id="book" class="col-md-4">
+            <img src="{{ asset('images/nfq.jpg') }}" alt="NFQ Akademija">
+</aside>
+<aside id="book-description" class="col-md-8">
+{% for book in books %}
+<h1>{{ book.title }}</h1>
+<h3><em>{{ book.author }}</em></h3>
+<span>ISBN: </span><div> {{ book.isbn }}</div>
+<span>Žanras: </span><div> {{ book.genre }}</div>
+<span>Kaina: </span><div> {{ book.price }}</div>
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#order-form">{{ 'form.labels.submit'|trans({}, 'messages') }}</button>
+
+</aside>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="order-form" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">{{ 'form.labels.submitform'|trans({}, 'messages') }}</h4>
+            </div>
+            <div class="modal-body">
+
+              {{ form_start(forma) }}
+              {{form_widget(forma.isbn, {
+              'value' : book.isbn
+                    })
+                    }}
+              {{ form_widget(forma) }}
+              {{ form_end(forma) }}
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endfor %}
+{% endblock %}

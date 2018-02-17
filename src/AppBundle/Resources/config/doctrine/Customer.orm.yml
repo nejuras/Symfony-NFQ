@@ -1,0 +1,36 @@
+AppBundle\Entity\Customer:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CustomerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstname:
+            type: string
+            length: 255
+        lastname:
+            type: string
+            length: 50
+        email:
+            type: string
+            length: 30
+        phone:
+            type: integer
+            length: 10
+        address:
+            type: string
+            length: 90
+        city:
+            type: string
+            length: 90
+        isbn:
+            type: string
+            length: 20
+        postalcode:
+            type: string
+            length: 8
+    lifecycleCallbacks: {  }
