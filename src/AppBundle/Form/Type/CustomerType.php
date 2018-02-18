@@ -37,7 +37,7 @@ class CustomerType extends AbstractType
            ->add('city', ChoiceType::class, [
                'placeholder' => 'city.names.pasirinkti',
                'label' => 'form.labels.city',
-               'choices' => array(
+               'choices' => [
         'city.names.Vilnius' => 'Vilnius',
         'city.names.Kaunas' => 'Kaunas',
         'city.names.Panevezys'   => 'Panevėžys',
@@ -57,7 +57,7 @@ class CustomerType extends AbstractType
         'city.names.Kedainiai' => 'Kėdainiai',
         'city.names.Silutė' => 'Šilutė',
         'city.names.Silalė' => 'Šilalė'
-    )
+    ]
            ])
            ->add('postalcode', TextType::class, [
                'label' => 'form.labels.postalcode'
