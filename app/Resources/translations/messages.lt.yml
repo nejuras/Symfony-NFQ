@@ -14,3 +14,26 @@ form:
           button:       Filtruoti
 #         label:        Paieška
           placeholder:  Filtruoti pagal vardą
+
+city:
+    names:
+       pasirinkti: Pasirinkite miestą
+       Vilnius: Vilnius
+       Kaunas : Kaunas
+       Panevezys   : Panevežys
+       Siauliai : Šiauliai
+       Zarasai : Zarasai
+       Prienai : Prienai
+       Jonava   : Jonava
+       Radviliskis : Radviliškis
+       Alytus : Alytus
+       Birzai : Biržai
+       Ukmerge : Ukmergė
+       Druskininkai : Druskininkai
+       Elektrenai : Elektėnai
+       Jurbarkas : Jurbarkas
+       Plunge : Plungė
+       Visaginas : Visaginas
+       Kedainiai : Kėdainiai
+       Silutė : Šilutė
+       Silalė : Šilalė
