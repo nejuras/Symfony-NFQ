@@ -35,7 +35,7 @@ class CustomerType extends AbstractType
                'label' => 'form.labels.address'
            ])
            ->add('city', ChoiceType::class, [
-             'placeholder' => 'city.names.pasirinkti',
+               'placeholder' => 'city.names.pasirinkti',
                'label' => 'form.labels.city',
                'choices' => array(
         'city.names.Vilnius' => 'Vilnius',
